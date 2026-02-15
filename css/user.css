@@ -1,0 +1,171 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f5f6fa;
+    font-family: "Poppins", sans-serif;
+}
+
+.page-wrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.settings-form {
+    background: white;
+    width: 100%;
+    max-width: 840px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.form-title {
+    font-size: 26px;
+    margin-bottom: 6px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.title-line {
+    border: none;
+    height: 3px;
+    background: #5B3FFF;
+    border-radius: 4px;
+    margin: 0 auto 14px auto;
+    width: 60%;
+}
+
+.subtitle {
+    font-size: 14px;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 28px;
+    color: #666;
+}
+
+.section {
+    padding: 22px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.blue-box {
+    background: #dce6ff;
+    border: 1px solid #b9caff;
+}
+
+.red-box {
+    background: #ffe0e0;
+    border: 1px solid #ffbfbf;
+}
+
+.green-box {
+    background: #dcfce9;
+    border: 1px solid #b5f5d4;
+}
+
+.section-title {
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.blue-box .section-title {
+    color: #0055ff;
+}
+
+.red-box .section-title {
+    color: #e10000;
+}
+
+.green-box .section-title {
+    color: #016f3c;
+}
+
+.form-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    gap: 20px;
+}
+
+.form-row label {
+    width: 40%;
+    font-weight: 400;
+}
+
+.form-row input,
+.form-row select {
+    width: 60%;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    background: white;
+}
+
+.checkbox-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.radio-group {
+    display: flex;
+    gap: 20px;
+}
+
+.bottom-line {
+    border: none;
+    height: 1px;
+    background: #e2e2e2;
+    margin: 20px 0;
+}
+
+.save-btn {
+    width: 100%;
+    padding: 14px;
+    background: #5B3FFF;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 25px;
+    transition: background-color 0.2s;
+}
+
+.save-btn:hover {
+    background: #472ed1;
+}
+
+@media (max-width: 750px) {
+    .form-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .form-row label {
+        width: 100%;
+    }
+
+    .form-row input,
+    .form-row select {
+        width: 100%;
+    }
+
+    .radio-group {
+        flex-direction: column;
+        gap: 6px;
+        width: 100%;
+    }
+}

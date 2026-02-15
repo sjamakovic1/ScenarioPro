@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="bs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Settings</title>
+    <link rel="stylesheet" href="../css/user.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="page-wrapper">
+
+    <form class="settings-form">
+
+        <h1 class="form-title">Postavke korisničkog računa</h1>
+        <hr class="title-line">
+        <p class="subtitle">Upravljajte vašim korisničkim računom, sigurnosnim postavkama i notifikacijama.</p>
+
+
+        <section class="section blue-box">
+            <h2 class="section-title">Podaci o korisničkom računu</h2>
+
+            <div class="form-row">
+                <label>Ime i prezime</label>
+                <input type="text" placeholder="Ime Prezime">
+            </div>
+
+            <div class="form-row">
+                <label>Email adresa</label>
+                <input type="email" placeholder="vasmail@gmail.com">
+            </div>
+
+            <div class="form-row">
+                <label>Broj elemenata po stranici (1-100)</label>
+                <input type="number" min="1" max="100" placeholder="25">
+            </div>
+        </section>
+
+
+        <section class="section red-box">
+            <h2 class="section-title">Sigurnosne postavke</h2>
+
+            <div class="form-row">
+                <label>Nova šifra</label>
+                <input type="password" placeholder="*********">
+            </div>
+
+            <div class="checkbox-row">
+                <input type="checkbox" id="2fa">
+                <label for="2fa">Omogući Two-Factor Authentication (2FA)</label>
+            </div>
+        </section>
+
+
+        <section class="section green-box">
+            <h2 class="section-title">Notifikacije</h2>
+
+            <div class="form-row">
+                <label>Preferirani način komunikacije</label>
+
+                <div class="radio-group">
+                    <label><input type="radio" name="contact" checked>Email</label>
+                    <label><input type="radio" name="contact">SMS</label>
+                    <label><input type="radio" name="contact">None</label>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label>Notification frequency</label>
+
+                <select>
+                    <option>Daily</option>
+                    <option>Weekly</option>
+                    <option>Monthly</option>
+                    <option>Never</option>
+                </select>
+            </div>
+        </section>
+        <hr class="bottom-line">
+        <button class="save-btn">Spasi promjene</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

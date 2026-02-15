@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScenarijPro – Pisanje</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/writing.css">
+</head>
+
+<body>
+
+<header class="topbar">
+    <div class="top-left">
+        <button class="back-btn">
+            <img src="https://www.svgrepo.com/download/416120/arrow-back-basic.svg" alt="Nazad">
+        </button>
+        <h1 class="project-title">THE LAST STARSHIP (Draft 2)</h1>
+    </div>
+
+ <div class="top-center">
+    <button id="btnModeScenario" class="mode-btn">ODABERI SCENARIJ</button>
+    <button id="btnModeScene" class="mode-btn">SCENA</button>
+    <button id="btnModeAction" class="mode-btn">AKCIJA</button>
+    <button id="btnModeCharacter" class="mode-btn">LIK</button>
+    <button id="btnModeDialog" class="mode-btn">DIJALOG</button>
+</div>
+
+
+    <div class="top-right">
+
+        <div id="lockStatus" class="lock-box unlocked">
+            Nije zaključano
+        </div>
+<button id="btnToggleDeltas" class="mode-btn">
+    PROMJENE
+</button>
+
+        <button id="btnSave" class="save-btn" disabled>
+            <img src="https://www.svgrepo.com/download/73672/correct.svg" class="save-icon" alt="">
+            SPASI
+        </button>
+    </div>
+</header>
+
+
+<section id="panelScenario" class="api-panel inline hidden">
+    <h3>Scenario</h3>
+
+    <label>Scenario ID:</label>
+    <input id="inputScenarioId" type="number" value="1">
+
+    <label>User ID:</label>
+    <input id="inputUserId" type="number" value="1">
+
+    <button id="btnLoadScenario">Učitaj scenario</button>
+    <button id="btnNewScenario">Novi scenario</button>
+</section>
+
+
+<section id="panelCharacter" class="api-panel inline hidden">
+    <h3>Lik</h3>
+
+    <input id="oldCharacterName" placeholder="Staro ime (ALICE)">
+    <input id="newCharacterName" placeholder="Novo ime (ALICIA)">
+
+    <button id="btnLockCharacter">Zaključaj ime</button>
+    <button id="btnRenameCharacter">Promijeni ime</button>
+
+    <div id="characterLockStatus" class="status-info">
+        Ime nije zaključano.
+    </div>
+</section>
+<section id="panelDeltas" class="deltas-panel hidden">
+    <h3>Promjene (Deltas)</h3>
+    <div id="deltasList" class="deltas-list"></div>
+</section>
+
+<div class="writing-layout">
+
+
+    <aside class="scene-sidebar">
+        <h2 class="sidebar-title">Scene</h2>
+        <ul id="sceneList" class="scene-list"></ul>
+    </aside>
+
+    <div class="editor-column">
+
+        <div class="editor-toolbar">
+
+            <div class="toolbar-group format-group">
+                <button id="btnBold" class="fmt-btn"><b>B</b></button>
+                <button id="btnItalic" class="fmt-btn"><i>I</i></button>
+                <button id="btnUnderline" class="fmt-btn"><u>U</u></button>
+            </div>
+
+            <div class="toolbar-group action-group">
+                <button id="btnBrojRijeci" class="tb-btn">BROJ RIJEČI</button>
+                <button id="btnDajUloge" class="tb-btn">ULOGE</button>
+                <button id="btnPogresne" class="tb-btn">POGREŠNE</button>
+                <button id="btnGrupe" class="tb-btn">GRUPE</button>
+            </div>
+
+            <div class="toolbar-group input-group">
+                <input id="inputUloga" type="text" placeholder="Uloga..." class="tb-input">
+                <button id="btnBrojLinija" class="tb-btn">LINIJE</button>
+                <button id="btnScenarij" class="tb-btn">SCENARIJ</button>
+            </div>
+
+        </div>
+
+ 
+
+
+        <main class="editor">
+            <div id="divEditor" contenteditable="true" class="paper"></div>
+        </main>
+
+    </div>
+
+</div>
+
+<script src="../js/EditorTeksta.js"></script>
+<script src="../js/PoziviAjaxFetch.js"></script>
+<script src="../js/editor.js"></script>
+
+</body>
+</html>
