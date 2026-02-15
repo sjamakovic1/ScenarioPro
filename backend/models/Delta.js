@@ -1,0 +1,40 @@
+"use strict";
+
+module.exports = (sequelize, DataTypes) => {
+  return sequelize.define("Delta", {
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true
+    },
+    scenarioId: {
+      type: DataTypes.INTEGER
+    },
+    type: {
+      type: DataTypes.STRING
+    },
+    lineId: {
+      type: DataTypes.INTEGER,
+      allowNull: true
+    },
+    nextLineId: {
+      type: DataTypes.INTEGER,
+      allowNull: true
+    },
+    content: {
+      type: DataTypes.TEXT,
+      allowNull: true
+    },
+    oldName: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    newName: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    timestamp: {
+      type: DataTypes.INTEGER
+    }
+  });
+};
